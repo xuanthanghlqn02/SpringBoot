@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //Bài 1: Viết function truyền vào 1 số nguyên dường. Tính giai thừa của số đó
+        function factorial(n) {
+            let answer = 1;
+            if (n == 0 || n == 1) {
+                return answer;
+            } else {
+                for (let i = n; i >= 1; i--) {
+                    answer = answer * i;
+                }
+                return answer;
+            }
+        }
+        let n = 5;
+        answer = factorial(n)
+        console.log("The factorial of " + n + " is " + answer);
+
+        let n1 = 6;
+        answer1 = factorial(n1)
+        console.log("The factorial of " + n1 + " is " + answer1);
+
+        console.log("------------------------------")
+        //Bài 2: Viết function truyền vào 1 chuỗi. In ra chuỗi đảo ngược của chuỗi đó
+
+        function reverseString(str) {
+            let newString = "";
+
+            for (let i = str.length - 1; i >= 0; i--) {
+                newString += str[i];
+            }
+
+            return newString;
+        }
+
+        console.log(reverseString('hello'));
+        console.log(reverseString('asdf'));
+
+        console.log("------------------------------")
+        //Bài 3: Viết function truyền vào mã quốc gia. Trả về message có ý nghĩa là “Xin chào”, tương ứng với mã quốc gia được truyền vào
+
+        function translate(str) {
+            if (str == "VN") {
+                console.log("Xin chào")
+            }
+            if (str == "EN") {
+                console.log("Hello")
+            }
+            if (str == "CN") {
+                console.log("Ni hao")
+            }
+        }
+
+        translate("VN")
+        translate("EN")
+        translate("CN")
+
+        console.log("------------------------------")
+        //Bài 4: Cho function truyền vào 1 chuỗi dài hơn 15 ký tự. Viết 1 function cắt chuỗi, lấy ra 10 ký tự đầu tiên và thêm vào dấu “…” ở cuối chuỗi.
+
+        function cutString(str) {
+            if (str.length < 15) {
+                console.log(str)
+            } else {
+                console.log(str.substring(0, 10) + "...")
+            }
+        }
+
+        let str = `xinchaocacbandenvoiTechmaster`;
+        cutString(str)
+        let str1 = `asdasd`;
+        cutString(str1)
+
+    </script>
+</body>
+
+</html>
