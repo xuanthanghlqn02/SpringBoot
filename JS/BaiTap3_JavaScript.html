@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 6. Thêm 1 sản phẩm bất kỳ vào trong mảng product
+
+        function newProduct() {
+            let name = prompt("Enter the name of the product:");
+            let price = parseInt(prompt("Enter the price of the product:"));
+            let brand = prompt("Enter the brand of the product:");
+            let count = parseInt(prompt("Enter the count of the product:"));
+            let item = { name, price, brand, count };
+            return item;
+        }
+
+        products.push(newProduct());
+
+        // 7. Xóa tất cả sản phẩm của thương hiệu "Samsung" trong giỏ hàng
+
+        function removeSamsung(arr) {
+            return arr.filter(function (item) {
+                return item.brand != "Samsung";
+            });
+        }
+
+        removeSamsung(products);
+
+        // 8. Sắp xếp giỏ hàng theo price tăng dần
+
+        [...products].sort(function (a, b) {
+            return a.price - b.price;
+        });
+
+        // 9. Sắp xếp giỏ hàng theo count giảm dần
+
+        [...products].sort(function (a, b) {
+            return b.count - a.count;
+        });
+
+        // 10. Lấy ra 2 sản phẩm bất kỳ trong giỏ hàng
+
+        function randomProducts(arr) {
+            let a = Math.floor(Math.random() * arr.length);
+            let b = Math.floor(Math.random() * arr.length);
+            if (b == a && b < arr.length) {
+                b += 1;
+            }
+            if (b == a && b == arr.length) {
+                b -= 1;
+            }
+
+            // Mục đích em thêm 2 if này để việc lấy ra 2 sản phẩm k bao giờ bị trùng nhau
+
+            return [arr[a], arr[b]];
+        };
+        randomProducts(products);
+
+    </script>
+</body>
+
+</html>
