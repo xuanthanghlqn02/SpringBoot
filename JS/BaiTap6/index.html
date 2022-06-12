@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container-fluid" id="header">
+        <header>
+            <div class="navbar navbar-expand-lg pt-2 pb-2 ps-4">
+                <div class="logo-brand">
+                    <a href="#">
+                        <img src="https://techmaster.vn/resources/image/logo-techmaster/white/white_200x74.png"
+                            alt="logo">
+                    </a>
+                </div>
+
+                <div class="title1" style="padding-left: 80px;">
+                    <a href="#">
+                        <span>ONLAB</span>
+                    </a>
+                </div>
+
+                <div class="title1" style="padding-left:30px;">
+                    <a href="#">
+                        <span>TRỰC TUYẾN</span>
+                    </a>
+                </div>
+            </div>
+
+
+        </header>
+    </div>
+
+    <div class="body-part">
+        <div class="container body-content">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="box">
+                        <p class="subjectTitle">Chủ đề</p>
+
+                        <div class="md-radio">
+                            <input class="course-filter" type="radio" value="AWS" id="AWS" name="Chủ đề"
+                                data-subfilter="AWS" data-subjecttitle="Chủ đề">
+                            <label for="AWS" class="subjectTitleLabel">AWS</label>
+                        </div>
+
+                        <div class="md-radio">
+                            <input class="course-filter" type="radio" value="DevOps" id="DevOps" name="Chủ đề"
+                                data-subfilter="DevOps" data-subjecttitle="Chủ đề">
+                            <label for="DevOps" class="subjectTitleLabel">DevOps</label>
+                        </div>
+
+                        <div class="md-radio">
+                            <input class="course-filter" type="radio" value="Lập trình" id="Lập trình" name="Chủ đề"
+                                data-subfilter="Lập trình" data-subjecttitle="Chủ đề">
+                            <label for="Lập trình" class="subjectTitleLabel">Lập trình</label>
+                        </div>
+
+                        <div class="md-radio">
+                            <input class="course-filter" type="radio" value="Lập trình web" id="Lập trình web"
+                                name="Chủ đề" data-subfilter="Lập trình web" data-subjecttitle="Chủ đề">
+                            <label for="Lập trình web" class="subjectTitleLabel">Lập trình web</label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-9">
+                    <div class="box">
+                        <div class="list-search">
+                            <div class="list-search-content">
+                                <div class="search-course">
+                                    <input class="form-control" placeholder="Tìm kiếm khóa học"
+                                        id="input-search-course">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+
+                        <div class="list-courses">
+                            <div class="tech-card">
+                                <a href="./spring_boot.html">
+                                    <div class="course-thumbnail">
+                                        <img src="https://media.techmaster.vn/api/static/36/bu7v9ks51co41h2qcttg"
+                                            alt="Spring Boot - Web Back End">
+                                    </div>
+                                    <div class="course-info">
+                                        <p class="course-title">
+                                            Spring Boot - Web Back End
+                                        </p>
+                                        <p class="course-description">Onlab
+                                            <span>5
+                                                <i class="fas fa-star" style="color:#ffd600">
+                                                </i>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="tech-card"><a
+                                    href="#">
+                                    <div class="course-thumbnail"><img
+                                            src="https://media.techmaster.vn/api/static/bub3enc51co7s932dsk0/bjxnxQi0"
+                                            alt="Lập trình iOS Swift căn bản cập nhật 2022"></div>
+                                    <div class="course-info">
+                                        <p class="course-title">Lập trình iOS Swift căn bản cập nhật 2022</p>
+                                        <p class="course-description">Onlab <span>4.7 <i class="fas fa-star"
+                                                    style="color:#ffd600"></i></span></p>
+                                    </div>
+                                </a></div>
+
+                            <div class="tech-card"><a
+                                    href="#">
+                                    <div class="course-thumbnail"><img
+                                            src="https://media.techmaster.vn/api/static/brbgh4451coepbqoch60/bt3miv451co41h2qcnr0"
+                                            alt="Khoá học Lập trình Arduino Scratch cho trẻ em"></div>
+                                    <div class="course-info">
+                                        <p class="course-title">Khoá học Lập trình Arduino Scratch cho trẻ em</p>
+                                        <p class="course-description">Onlab <span>5 <i class="fas fa-star"
+                                                    style="color:#ffd600"></i></span></p>
+                                    </div>
+                                </a></div>
+
+                            <div class="tech-card"><a href="#">
+                                    <div class="course-thumbnail"><img
+                                            src="https://media.techmaster.vn/api/static/36/bu7vt2451co5836g4l70"
+                                            alt="Thiết kế - Lập trình cơ sở dữ liệu"></div>
+                                    <div class="course-info">
+                                        <p class="course-title">Thiết kế - Lập trình cơ sở dữ liệu</p>
+                                        <p class="course-description">Onlab <span>4 <i class="fas fa-star"
+                                                    style="color:#ffd600"></i></span></p>
+                                    </div>
+                                </a></div>
+
+                            <div class="tech-card"><a href="#">
+                                    <div class="course-thumbnail"><img
+                                            src="https://media.techmaster.vn/api/static/bub3enc51co7s932dsk0/ZuedW7J1"
+                                            alt="Java căn bản"></div>
+                                    <div class="course-info">
+                                        <p class="course-title">Java căn bản</p>
+                                        <p class="course-description">Onlab <span>5 <i class="fas fa-star"
+                                                    style="color:#ffd600"></i></span></p>
+                                    </div>
+                                </a></div>
+
+                            <div class="tech-card"><a href="#">
+                                    <div class="course-thumbnail"><img
+                                            src="https://media.techmaster.vn/api/static/36/bu7v5ak51co41h2qctt0"
+                                            alt="Java cấu trúc dữ liệu - giải thuật"></div>
+                                    <div class="course-info">
+                                        <p class="course-title">Java cấu trúc dữ liệu - giải thuật</p>
+                                        <p class="course-description">Onlab <span>5 <i class="fas fa-star"
+                                                    style="color:#ffd600"></i></span></p>
+                                    </div>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
