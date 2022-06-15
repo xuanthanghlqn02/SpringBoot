@@ -28,6 +28,7 @@ getBreedList();
 
 
 btnEl.addEventListener("click", async () => {
+    imgEl.src = "";
     try {
         let value = breedListEl.value;
         let res = await axios.get(`https://dog.ceo/api/breed/${value}/list`);
