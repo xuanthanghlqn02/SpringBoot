@@ -1,6 +1,7 @@
 const breedListEl = document.getElementById("breed-list");
 const btnEl = document.getElementById("btn");
 const subBreedsListEl = document.querySelector(".sub-breeds-list");
+const imgEl = document.getElementById("image");
 
 const getBreedList = async () => {
     try {
@@ -38,18 +39,39 @@ btnEl.addEventListener("click", async () => {
 })
 
 const showSubBreedsList = obj => {
+    // imgEl.src = "";
     subBreedsListEl.innerHTML = "";
     let subList = obj.data.message;
     if (subList.length == 0) {
         subBreedsListEl.innerHTML = `<li>Không có sub breed</li>`;
         return;
     }
+    // let html = "";
+    // for (let i = 0; i < subList.length; i++) {
+    //     const element = subList[i];
+    //     html += `<li><a href="#">${subList[i]}</a></li>`;
+    // }
+    // subBreedsListEl.innerHTML = html;
 
-    // let keys = Object.keys(obj);
-    let html = "";
+    // async function showRandomImage() {
+    //     let html1 = `https://dog.ceo/api/breed/${breedListEl}/${subList}/images/random`;
+    //     let res1 = await axios.get(html);
+    //     console.log(res1);
+    //     imgEl.src = res1.data.message
+    // }
+
     for (let i = 0; i < subList.length; i++) {
-        const element = subList[i];
-        html += `<li><a href="#">${subList[i]}</a></li>`;
+        let newBreed = document.createElement("li");
+        newBreed.innerHTML = `<a href="#">${subList[i]}</a>`;
+        subBreedsListEl.append(newBreed);
+
+        newBreed.addEventListener("click", async () => {
+            let html = `https://dog.ceo/api/breed/${breedListEl.value}/${subList[i]}/images/random`;
+            let res = await axios.get(html);
+            console.log(res);
+            imgEl.src = res.data.message;
+        });
     }
-    subBreedsListEl.innerHTML = html;
 }
+
+
